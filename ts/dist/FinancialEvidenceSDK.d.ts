@@ -1,0 +1,63 @@
+import { AgentQueryEntity } from './entity/AgentQueryEntity';
+import { AgentReviewEntity } from './entity/AgentReviewEntity';
+import { DatasetEntity } from './entity/DatasetEntity';
+import { FundingReviewEntity } from './entity/FundingReviewEntity';
+import { QueryEntity } from './entity/QueryEntity';
+import { ReleaseEntity } from './entity/ReleaseEntity';
+import { SourceEntity } from './entity/SourceEntity';
+import { StartEntity } from './entity/StartEntity';
+import { WorkflowEntity } from './entity/WorkflowEntity';
+export type * from './FinancialEvidenceTypes';
+import { inspect } from 'node:util';
+import type { Context, Feature } from './types';
+import { config } from './Config';
+import { FinancialEvidenceEntityBase } from './FinancialEvidenceEntityBase';
+import { Utility } from './utility/Utility';
+import { BaseFeature } from './feature/base/BaseFeature';
+declare const stdutil: Utility;
+type DirectResult = {
+    ok: false;
+    err: any;
+    status?: undefined;
+    headers?: undefined;
+    data?: undefined;
+} | {
+    ok: boolean;
+    status: number;
+    headers: any;
+    data: any;
+    err?: any;
+};
+declare class FinancialEvidenceSDK {
+    _mode: string;
+    _options: any;
+    _utility: Utility;
+    _features: Feature[];
+    _rootctx: Context;
+    constructor(options?: any);
+    options(): any;
+    utility(): any;
+    prepare(fetchargs?: any): Promise<any>;
+    direct(fetchargs?: any): Promise<DirectResult>;
+    _rawRequest(fetchargs?: any): Promise<DirectResult>;
+    graphql(query: string, variables?: any, ctrl?: any): Promise<any>;
+    AgentQuery(entopts?: Record<string, any>): AgentQueryEntity;
+    AgentReview(entopts?: Record<string, any>): AgentReviewEntity;
+    Dataset(entopts?: Record<string, any>): DatasetEntity;
+    FundingReview(entopts?: Record<string, any>): FundingReviewEntity;
+    Query(entopts?: Record<string, any>): QueryEntity;
+    Release(entopts?: Record<string, any>): ReleaseEntity;
+    Source(entopts?: Record<string, any>): SourceEntity;
+    Start(entopts?: Record<string, any>): StartEntity;
+    Workflow(entopts?: Record<string, any>): WorkflowEntity;
+    static test(testoptsarg?: any, sdkoptsarg?: any): FinancialEvidenceSDK;
+    tester(testopts?: any, sdkopts?: any): FinancialEvidenceSDK;
+    toJSON(): {
+        name: string;
+    };
+    toString(): string;
+    [inspect.custom](): string;
+}
+declare const SDK: typeof FinancialEvidenceSDK;
+export { stdutil, config, BaseFeature, FinancialEvidenceEntityBase, FinancialEvidenceSDK, SDK, };
+export type { DirectResult };

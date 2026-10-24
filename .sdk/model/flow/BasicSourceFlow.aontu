@@ -1,0 +1,22 @@
+# BasicSourceFlow
+
+main: kit: flow: BasicSourceFlow:
+{
+  entity: "source",
+  kind: "basic",
+  name: "BasicSourceFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "source_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSourceFlow"
+}

@@ -1,0 +1,49 @@
+# Entity: release
+
+main: kit: entity: release: {
+
+  alias: field: {}
+
+  name: "release"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/release"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/release"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "release"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

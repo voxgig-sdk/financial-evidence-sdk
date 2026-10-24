@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "agent_query": {
+      "AGENT_QUERY00": {
+        "id": "AGENT_QUERY00"
+      },
+      "AGENT_QUERY01": {
+        "id": "AGENT_QUERY01"
+      },
+      "AGENT_QUERY02": {
+        "id": "AGENT_QUERY02"
+      }
+    }
+  },
+  "new": {
+    "agent_query": {
+      "agent_query_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/agent-query": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

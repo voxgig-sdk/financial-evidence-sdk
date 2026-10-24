@@ -1,0 +1,28 @@
+# BasicStartFlow
+
+main: kit: flow: BasicStartFlow:
+{
+  entity: "start",
+  kind: "basic",
+  name: "BasicStartFlow",
+  step: [
+    {
+      i: {
+        ref: "start_ref01",
+        srcdatavar: "start_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-start_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicStartFlow"
+}

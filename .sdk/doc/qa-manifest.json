@@ -1,0 +1,13 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Start at /api/v1/start to choose a funding, institution or BTC liquidity review. Run the same task in a browser, REST client or MCP agent. Public reads need no API key. Seven dataset views preserve sources, observation dates, native units and missing values. Coverage and source permissions vary; research evidence does not authorize financial decisions.",
+      "Successful Response"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# BasicQueryFlow
+
+main: kit: flow: BasicQueryFlow:
+{
+  entity: "query",
+  kind: "basic",
+  name: "BasicQueryFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "query_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicQueryFlow"
+}

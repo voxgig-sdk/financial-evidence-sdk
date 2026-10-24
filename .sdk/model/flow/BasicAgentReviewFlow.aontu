@@ -1,0 +1,28 @@
+# BasicAgentReviewFlow
+
+main: kit: flow: BasicAgentReviewFlow:
+{
+  entity: "agent_review",
+  kind: "basic",
+  name: "BasicAgentReviewFlow",
+  step: [
+    {
+      i: {
+        ref: "agent_review_ref01",
+        srcdatavar: "agent_review_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-agent_review_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAgentReviewFlow"
+}

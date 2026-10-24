@@ -1,0 +1,49 @@
+# Entity: start
+
+main: kit: entity: start: {
+
+  alias: field: {}
+
+  name: "start"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/start"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/start"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "start"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

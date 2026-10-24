@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "agent_review": {
+      "AGENT_REVIEW00": {
+        "id": "AGENT_REVIEW00"
+      },
+      "AGENT_REVIEW01": {
+        "id": "AGENT_REVIEW01"
+      },
+      "AGENT_REVIEW02": {
+        "id": "AGENT_REVIEW02"
+      }
+    }
+  },
+  "new": {
+    "agent_review": {
+      "agent_review_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/agent-review": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

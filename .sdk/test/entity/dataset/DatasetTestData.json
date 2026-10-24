@@ -1,0 +1,21 @@
+{
+  "existing": {
+    "dataset": {
+      "DATASET00": {},
+      "DATASET01": {},
+      "DATASET02": {}
+    }
+  },
+  "new": {
+    "dataset": {
+      "dataset_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/datasets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

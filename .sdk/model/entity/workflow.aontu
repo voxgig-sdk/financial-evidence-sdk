@@ -1,0 +1,75 @@
+# Entity: workflow
+
+main: kit: entity: workflow: {
+
+  alias: field: {}
+
+  name: "workflow"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/workflow"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "USD"
+                k: "query"
+                n: "selection"
+                or: "selection"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "funding"
+                k: "query"
+                n: "workflow"
+                or: "workflow"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/workflow"
+          q: {
+            exist: [
+              "selection"
+              "workflow"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "workflow"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

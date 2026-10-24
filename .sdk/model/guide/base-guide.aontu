@@ -1,0 +1,65 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 9
+  metrics: count: path: 9
+  metrics: count: method: 9
+
+  entity: agent_query: {
+    path: "/api/v1/agent-query": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: agent_review: {
+    path: "/api/v1/agent-review": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: dataset: {
+    path: "/api/v1/datasets": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: funding_review: {
+    path: "/api/v1/funding-review": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: query: {
+    path: "/api/v1/query": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: release: {
+    path: "/api/v1/release": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: source: {
+    path: "/api/v1/sources": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: start: {
+    path: "/api/v1/start": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: workflow: {
+    path: "/api/v1/workflow": {
+      op: load: method: *GET
+    }
+  }
+
+}

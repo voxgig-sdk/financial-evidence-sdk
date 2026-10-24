@@ -1,0 +1,28 @@
+# BasicFundingReviewFlow
+
+main: kit: flow: BasicFundingReviewFlow:
+{
+  entity: "funding_review",
+  kind: "basic",
+  name: "BasicFundingReviewFlow",
+  step: [
+    {
+      i: {
+        ref: "funding_review_ref01",
+        srcdatavar: "funding_review_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-funding_review_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFundingReviewFlow"
+}

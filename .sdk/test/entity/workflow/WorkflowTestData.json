@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "workflow": {
+      "WORKFLOW00": {
+        "id": "WORKFLOW00"
+      },
+      "WORKFLOW01": {
+        "id": "WORKFLOW01"
+      },
+      "WORKFLOW02": {
+        "id": "WORKFLOW02"
+      }
+    }
+  },
+  "new": {
+    "workflow": {
+      "workflow_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/workflow": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

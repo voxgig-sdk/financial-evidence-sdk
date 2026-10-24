@@ -1,0 +1,145 @@
+# Entity: source
+
+main: kit: entity: source: {
+
+  alias: field: {}
+
+  fields: {
+    absence_policy: {
+      h: "Absence Policy"
+      n: "absence_policy"
+      r: true
+      t: "`$STRING`"
+    }
+    carrier_verification: {
+      h: "Carrier Verification"
+      n: "carrier_verification"
+      r: true
+      t: "`$STRING`"
+    }
+    dataset: {
+      h: "Dataset"
+      n: "dataset"
+      r: true
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: "`$STRING`"
+    }
+    diagnostics: {
+      h: "Diagnostics"
+      n: "diagnostics"
+      r: true
+      t: "`$ARRAY`"
+    }
+    evidence_status: {
+      h: "Evidence Status"
+      n: "evidence_status"
+      r: true
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: true
+      t: "`$INTEGER`"
+    }
+    next_offset: {
+      h: "Next Offset"
+      n: "next_offset"
+      r: true
+      t: "`$ANY`"
+    }
+    offset: {
+      h: "Offset"
+      n: "offset"
+      r: true
+      t: "`$INTEGER`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: true
+      t: "`$ARRAY`"
+    }
+    returned_rows: {
+      h: "Returned Rows"
+      n: "returned_rows"
+      r: true
+      t: "`$INTEGER`"
+    }
+    schema: {
+      h: "Schema"
+      n: "schema"
+      r: true
+      t: "`$STRING`"
+    }
+    sources: {
+      h: "Sources"
+      n: "sources"
+      r: true
+      t: "`$ARRAY`"
+    }
+    status_semantics: {
+      h: "Status Semantics"
+      n: "status_semantics"
+      r: true
+      t: "`$STRING`"
+    }
+    total_rows: {
+      h: "Total Rows"
+      n: "total_rows"
+      r: true
+      t: "`$INTEGER`"
+    }
+    transport_status: {
+      h: "Transport Status"
+      n: "transport_status"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "source"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/sources"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/sources"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "sources"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

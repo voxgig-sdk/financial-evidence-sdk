@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// FinancialEvidence SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+FinancialEvidenceUtility::setRegistrar(function (FinancialEvidenceUtility $u): void {
+    $u->clean = [FinancialEvidenceClean::class, 'call'];
+    $u->clean_add = [FinancialEvidenceClean::class, 'add'];
+    $u->clean_explain = [FinancialEvidenceDone::class, 'clean_explain'];
+    $u->done = [FinancialEvidenceDone::class, 'call'];
+    $u->make_error = [FinancialEvidenceMakeError::class, 'call'];
+    $u->feature_add = [FinancialEvidenceFeatureAdd::class, 'call'];
+    $u->feature_hook = [FinancialEvidenceFeatureHook::class, 'call'];
+    $u->feature_init = [FinancialEvidenceFeatureInit::class, 'call'];
+    $u->fetcher = [FinancialEvidenceFetcher::class, 'call'];
+    $u->make_fetch_def = [FinancialEvidenceMakeFetchDef::class, 'call'];
+    $u->make_context = [FinancialEvidenceMakeContext::class, 'call'];
+    $u->make_options = [FinancialEvidenceMakeOptions::class, 'call'];
+    $u->make_request = [FinancialEvidenceMakeRequest::class, 'call'];
+    $u->make_response = [FinancialEvidenceMakeResponse::class, 'call'];
+    $u->make_result = [FinancialEvidenceMakeResult::class, 'call'];
+    $u->make_point = [FinancialEvidenceMakePoint::class, 'call'];
+    $u->make_spec = [FinancialEvidenceMakeSpec::class, 'call'];
+    $u->make_url = [FinancialEvidenceMakeUrl::class, 'call'];
+    $u->param = [FinancialEvidenceParam::class, 'call'];
+    $u->prepare_auth = [FinancialEvidencePrepareAuth::class, 'call'];
+    $u->prepare_body = [FinancialEvidencePrepareBody::class, 'call'];
+    $u->prepare_headers = [FinancialEvidencePrepareHeaders::class, 'call'];
+    $u->prepare_method = [FinancialEvidencePrepareMethod::class, 'call'];
+    $u->prepare_params = [FinancialEvidencePrepareParams::class, 'call'];
+    $u->prepare_path = [FinancialEvidencePreparePath::class, 'call'];
+    $u->prepare_query = [FinancialEvidencePrepareQuery::class, 'call'];
+    $u->graphql_body = [FinancialEvidenceGraphql::class, 'body'];
+    $u->graphql_errors = [FinancialEvidenceGraphql::class, 'errors'];
+    $u->result_basic = [FinancialEvidenceResultBasic::class, 'call'];
+    $u->result_body = [FinancialEvidenceResultBody::class, 'call'];
+    $u->result_headers = [FinancialEvidenceResultHeaders::class, 'call'];
+    $u->transform_request = [FinancialEvidenceTransformRequest::class, 'call'];
+    $u->transform_response = [FinancialEvidenceTransformResponse::class, 'call'];
+});

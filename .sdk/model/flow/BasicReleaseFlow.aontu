@@ -1,0 +1,28 @@
+# BasicReleaseFlow
+
+main: kit: flow: BasicReleaseFlow:
+{
+  entity: "release",
+  kind: "basic",
+  name: "BasicReleaseFlow",
+  step: [
+    {
+      i: {
+        ref: "release_ref01",
+        srcdatavar: "release_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-release_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicReleaseFlow"
+}

@@ -1,0 +1,89 @@
+{
+  "existing": {
+    "query": {
+      "QUERY00": {
+        "absence_policy": "sa0",
+        "carrier_verification": "sa1",
+        "dataset": "sa2",
+        "description": "sa3",
+        "diagnostics": [],
+        "evidence_status": "sa5",
+        "limit": 166,
+        "next_offset": "sa7",
+        "offset": 168,
+        "results": [],
+        "returned_rows": 170,
+        "schema": "sab",
+        "sources": [],
+        "status_semantics": "sad",
+        "total_rows": 174,
+        "transport_status": "saf"
+      },
+      "QUERY01": {
+        "absence_policy": "s140",
+        "carrier_verification": "s141",
+        "dataset": "s142",
+        "description": "s143",
+        "diagnostics": [],
+        "evidence_status": "s145",
+        "limit": 326,
+        "next_offset": "s147",
+        "offset": 328,
+        "results": [],
+        "returned_rows": 330,
+        "schema": "s14b",
+        "sources": [],
+        "status_semantics": "s14d",
+        "total_rows": 334,
+        "transport_status": "s14f"
+      },
+      "QUERY02": {
+        "absence_policy": "s1e0",
+        "carrier_verification": "s1e1",
+        "dataset": "s1e2",
+        "description": "s1e3",
+        "diagnostics": [],
+        "evidence_status": "s1e5",
+        "limit": 486,
+        "next_offset": "s1e7",
+        "offset": 488,
+        "results": [],
+        "returned_rows": 490,
+        "schema": "s1eb",
+        "sources": [],
+        "status_semantics": "s1ed",
+        "total_rows": 494,
+        "transport_status": "s1ef"
+      }
+    }
+  },
+  "new": {
+    "query": {
+      "query_ref01": {
+        "absence_policy": "s280",
+        "carrier_verification": "s281",
+        "dataset": "s282",
+        "description": "s283",
+        "diagnostics": [],
+        "evidence_status": "s285",
+        "limit": 646,
+        "next_offset": "s287",
+        "offset": 648,
+        "results": [],
+        "returned_rows": 650,
+        "schema": "s28b",
+        "sources": [],
+        "status_semantics": "s28d",
+        "total_rows": 654,
+        "transport_status": "s28f"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/query": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

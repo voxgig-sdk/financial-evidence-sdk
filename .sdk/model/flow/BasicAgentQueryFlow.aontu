@@ -1,0 +1,28 @@
+# BasicAgentQueryFlow
+
+main: kit: flow: BasicAgentQueryFlow:
+{
+  entity: "agent_query",
+  kind: "basic",
+  name: "BasicAgentQueryFlow",
+  step: [
+    {
+      i: {
+        ref: "agent_query_ref01",
+        srcdatavar: "agent_query_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-agent_query_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAgentQueryFlow"
+}

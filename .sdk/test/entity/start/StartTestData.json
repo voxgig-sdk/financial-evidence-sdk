@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "start": {
+      "START00": {
+        "id": "START00"
+      },
+      "START01": {
+        "id": "START01"
+      },
+      "START02": {
+        "id": "START02"
+      }
+    }
+  },
+  "new": {
+    "start": {
+      "start_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/start": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

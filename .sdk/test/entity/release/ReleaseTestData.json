@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "release": {
+      "RELEASE00": {
+        "id": "RELEASE00"
+      },
+      "RELEASE01": {
+        "id": "RELEASE01"
+      },
+      "RELEASE02": {
+        "id": "RELEASE02"
+      }
+    }
+  },
+  "new": {
+    "release": {
+      "release_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/release": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

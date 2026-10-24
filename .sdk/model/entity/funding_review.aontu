@@ -1,0 +1,49 @@
+# Entity: funding_review
+
+main: kit: entity: funding_review: {
+
+  alias: field: {}
+
+  name: "funding_review"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/funding-review"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/funding-review"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "funding-review"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}
